@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.pokeapi_kotlin"
+    namespace = "com.appwork.pokeapi_kotlin"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.pokeapi_kotlin"
+        applicationId = "com.appwork.pokeapi_kotlin"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
@@ -33,6 +33,12 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+
+    buildFeatures {
+        viewBinding = true
+    }
+    buildToolsVersion = "36.0.0"
+    ndkVersion = "29.0.13113456 rc1"
 }
 
 dependencies {
@@ -45,4 +51,14 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation(libs.androidx.cardview)
+
+    // Retrofit + Gson
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+    implementation(libs.logging.interceptor)
+
+    // Coroutines
+    implementation(libs.kotlinx.coroutines.android)
+    implementation(libs.kotlin.stdlib)
 }

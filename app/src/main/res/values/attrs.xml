@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ImageButtonView">
+        <attr name="buttonImage" format="reference"/>
+        <attr name="buttonTint" format="color"/>
+    </declare-styleable>
+</resources>
